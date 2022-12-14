@@ -1,0 +1,9 @@
+.idea/*
+
+# CMake
+cmake-build-*/
+
+images
+
+build/libs/*
+
