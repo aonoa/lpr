@@ -74,7 +74,8 @@ int main() {
             }
         }
 
-        ncnn::Mat sample = ncnn::Mat::from_pixels_roi(img.data, ncnn::Mat::PIXEL_BGR, img.cols, img.rows, img.cols/3, img.rows/3, img.cols/2, img.rows/2);
+        ncnn::Mat sample = ncnn::Mat::from_pixels(img.data, ncnn::Mat::PIXEL_BGR, img.cols, img.rows);
+        // ncnn::Mat sample = ncnn::Mat::from_pixels_roi(img.data, ncnn::Mat::PIXEL_BGR, img.cols, img.rows, img.cols/3, img.rows/3, img.cols/2, img.rows/2);
         auto end2 = std::chrono::high_resolution_clock::now();
 
         std::vector<pr::PlateInfo> objects;
