@@ -12,12 +12,12 @@ if(OPENMP_FOUND)
     set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${OpenMP_EXE_LINKER_FLAGS}")
 endif()
 
-include_directories(deps/ncnn/include/ncnn include src)
-include_directories(deps/mlpr/include)
-include_directories(deps/libhv/include)
-link_directories(deps/ncnn/lib)
-link_directories(deps/mlpr/lib)
-link_directories(deps/libhv/lib)
+include_directories(third_party/ncnn/include/ncnn include src)
+include_directories(third_party/mlpr/include)
+include_directories(third_party/libhv/include)
+link_directories(third_party/ncnn/lib)
+link_directories(third_party/mlpr/lib)
+link_directories(third_party/libhv/lib)
 
 add_executable(lpr main.cpp)
 
